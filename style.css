@@ -20,6 +20,13 @@ img {
   max-width: 100%;
   height: auto;
 }
+footer {
+  margin-top: 3rem;
+  padding: 0.5rem;
+  border-top: 1px solid black;
+  background: rgba(0, 0, 0);
+  text-align: center;
+}
 
 .global-width {
   max-width: 620px;
