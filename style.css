@@ -20,13 +20,6 @@ img {
   max-width: 100%;
   height: auto;
 }
-footer {
-  margin-top: 3rem;
-  padding: 0.5rem;
-  border-top: 1px solid black;
-  background: rgba(0, 0, 0);
-  text-align: center;
-}
 
 .global-width {
   max-width: 620px;
@@ -38,6 +31,7 @@ footer {
   position: sticky;
   top: 0;
   height: 100vh;
+  overflow-x: hidden;
 }
 .graphic-item {
   display: flex;
@@ -49,6 +43,8 @@ footer {
   width: 100%;
   height: 100%;
   opacity: 0;
+  transition: linear 0.5s;
+  will-change: opacity;
 }
 .graphic-item.visible {
   opacity: 1;
@@ -62,9 +58,34 @@ footer {
   position: relative;
 }
 .step {
-  margin-bottom: 60vh;
+  margin-bottom: 70vh;
   padding: 0.5rem 1rem;
   border-radius: 1rem;
   background: rgba(255, 255, 255, 0.8);
   box-shadow: rgba(0, 0, 0, 0.3) 0 0 5px;
+}
+.strikethrough {
+  text-decoration: line-through;
+}
+.bird {
+  position: absolute;
+  left: 0;
+  bottom: 70%;
+  width: 100px;
+  z-index: 3;
+  transform: translateX(-100%);
+  transition: linear 0s 0.5s;
+}
+.visible .bird {
+  transition: linear 1.5s 0.5s;
+}
+[data-index='5'] .bird {
+  left: 30%;
+  bottom: 30%;
+}
+
+.global-footer {
+  margin-top: 3rem;
+  padding: 0.5rem;
+  text-align: center;
 }
